@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "41314287402",
+    "firebase_url": "https://telemergency-c7c2a.firebaseio.com",
+    "project_id": "telemergency-c7c2a",
+    "storage_bucket": "telemergency-c7c2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41314287402:android:c05afb1f05d46c22",
+        "android_client_info": {
+          "package_name": "com.telemergency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41314287402-f39jj7jftnja95roltimjq0o3f15b7l9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.telemergency",
+            "certificate_hash": "c02351154acd7285106524d6c1175f060df19f19"
+          }
+        },
+        {
+          "client_id": "41314287402-fd4mu37aspb5cvid801dc0vvd1vnnv6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDePta14nNbkBtIPbkJ6d6xk2QMaxMnhUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41314287402-fd4mu37aspb5cvid801dc0vvd1vnnv6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/nav_emergencyConsult"
+        android:icon="@drawable/ic_add_circle_black_24dp"
+        android:title="@string/menu_emergency_consult" />
+
+    <item
+        android:id="@+id/nav_emergencyReport"
+        android:icon="@drawable/ic_add_alert_black_24dp"
+        android:title="@string/menu_report_an_emergency" />
+
+        <item android:title="@string/section_medical_profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_view"
+                    android:icon="@drawable/ic_remove_red_eye_black_24dp"
+                    android:title="@string/menu_profile_view" />
+                <item
+                    android:id="@+id/nav_edit"
+                    android:icon="@drawable/ic_create_black_24dp"
+                    android:title="@string/menu_profile_update" />
+            </menu>
+        </item>
+
+        <item android:title="@string/section_communicate">
+            <menu>
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="@string/menu_share" />
+                <item
+                    android:id="@+id/nav_rate"
+                    android:icon="@drawable/ic_star_half_black_24dp"
+                    android:title="@string/menu_rate" />
+            </menu>
+        </item>
+
+    <item android:title="@string/section_app">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/menu_settings" />
+
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_black_24dp"
+                android:title="@string/menu_help" />
+        </menu>
+    </item>
+
+</menu>

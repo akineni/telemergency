@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        android:icon="@drawable/ic_sign_out_01"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_report_asthma"
+        android:title="Report asthma"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_report_bleeding"
+        android:title="Report bleeding"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_report_fainting"
+        android:title="Report fainting"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_report_seizure"
+        android:title="Report seizure"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_report_snake_bite"
+        android:title="Report snake bite"
+        app:showAsAction="never" />
+
+</menu>

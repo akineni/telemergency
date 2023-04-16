@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_view_message_margin_top">15dp</dimen>
+    <dimen name="text_view_header_text_size">34sp</dimen>
+    <dimen name="text_view_message_text_size">18sp</dimen>
+    <dimen name="drawable_padding">5dp</dimen>
+    <dimen name="text_button_text_size">16sp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="section_margin_top">40dp</dimen>
+    <dimen name="common_spacing_top">8dp</dimen>
+    <dimen name="spinner_text_size">18sp</dimen>
+</resources>

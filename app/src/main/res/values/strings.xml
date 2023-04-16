@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Telemergency</string>
+    <string name="title_activity_login">Log in</string>
+    <string name="header_title_activity_login">@string/title_activity_login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="required">This field is required</string>
+    <string name="invalid_email">Not a valid email address</string>
+    <string name="invalid_phone">Not a valid phone number</string>
+    <string name="invalid_password">Password must be at least 8 chars long</string>
+    <string name="password_mismatch">Both passwords do not match</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="show_password">"Show password"</string>
+    <string name="not_a_user">Not a user? click to register</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="background_image_content_description">background image</string>
+    <string name="surname">Surname</string>
+    <string name="first_name">Firstname</string>
+    <string name="other_names">Other names</string>
+    <string name="middle_name">Middlename</string>
+    <string name="create_account">Create Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="new_account">New Account</string>
+    <string name="have_an_account_please_login">Have an account?, please login</string>
+    <string name="signup_text_view_message">Create a new account with telemergency</string>
+    <string name="forgot_password_email_text_view_message">Enter your registered email address and a code will be sent to you</string>
+    <string name="forgot_password_phone_text_view_message">Enter your registered phone number and a code will be sent to you</string>
+    <string name="prompt_forgot_password">Forgot Password</string>
+    <string name="submit">Submit</string>
+    <string name="spinner_prompt_blood_group">Select blood group</string>
+    <string name="spinner_prompt_genotype">Select genotype</string>
+    <string name="spinner_prompt_gender">Select gender</string>
+
+    <string-array name="blood_group">
+        <item>@string/spinner_prompt_blood_group</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="genotype">
+        <item>@string/spinner_prompt_genotype</item>
+        <item>AA</item>
+        <item>AS</item>
+        <item>SS</item>
+        <item>AC</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>@string/spinner_prompt_gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile_view">View</string>
+    <string name="menu_profile_update">Update</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_rate">Rate App</string>
+    <string name="menu_settings">Settings</string>
+    <string name="section_medical_profile">Medical Profile</string>
+    <string name="section_communicate">Communicate</string>
+    <string name="menu_emergency_consult">Emergency consult</string>
+    <string name="menu_report_an_emergency">Report an emergency</string>
+    <string name="menu_help">Help</string>
+    <string name="section_app">App</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_logout">Logout</string>
+    <string name="alert_message">Click the button to alert the medical services.\n\nConventional SMS terms and conditions apply</string>
+    <string name="alert_button">Alert button</string>
+    <string name="alert_button_text">ALERT</string>
+    <string name="update_profile">UPDATE PROFILE</string>
+    <string name="about_dialog_close">CLOSE</string>
+    <string name="developer_info">akineni\n\nakinlonueniola@gmail.com\n+2349068857142</string>
+    <string name="copyright_info">Copyright &#169;  akineni 2019</string>
+    <string name="by">by</string>
+</resources>

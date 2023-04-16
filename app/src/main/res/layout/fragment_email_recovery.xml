@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailRecoveryFragment">
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_view_message_margin_top"
+        android:text="@string/forgot_password_email_text_view_message"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_view_message_text_size"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/prompt_email"
+        style="@style/MaterialTextInputLayout"
+        app:endIconMode="clear_text"
+        app:endIconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessage">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+            android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+            android:textColor="@android:color/white"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionDone"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/cursor_color">
+            <requestFocus />
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:enabled="false"
+        android:text="@string/submit"
+        android:textColor="@color/dodgerBlueLight"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailLayout"
+        app:backgroundTint="@color/button_color_state_list" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOtherRecoveryOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/submit"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

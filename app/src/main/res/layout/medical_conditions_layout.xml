@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.gridlayout.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+app:orientation="horizontal"
+app:columnCount="2">
+
+    <CheckBox
+        android:id="@+id/checkAsthma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Asthma" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Heart Disease" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Heart Failure" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Cardiac Arrest" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Stroke" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="HBP" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Arthritis" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Cancer" />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:textColor="@android:color/white"
+        android:buttonTint="@android:color/white"
+        android:text="Diabetics" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otherConditionsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill_horizontal"
+        android:hint="Others (specify)"
+        style="@style/MaterialTextInputLayout"
+        app:endIconMode="clear_text"
+        app:endIconTint="@android:color/white"
+        android:layout_marginTop="@dimen/common_spacing_top"
+        app:layout_columnSpan="2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otherConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:inputType="textCapSentences|textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.gridlayout.widget.GridLayout>

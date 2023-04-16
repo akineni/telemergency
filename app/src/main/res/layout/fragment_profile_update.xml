@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileUpdateFragment">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/symbol_outline"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/background_image_content_description"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_gradient"
+        android:alpha=".82"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_profile"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_view_header_text_size"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_spacing_top"
+                android:text="Emergency Medical Information"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_view_message_text_size"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewHeader"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateOfBirthLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Date of Birth"
+        style="@style/MaterialTextInputLayout"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/gender"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessage">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:drawableStart="@drawable/ic_date_range_black_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:textColor="@android:color/white"
+            android:focusable="false"
+            android:clickable="true"
+            android:selectAllOnFocus="true"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/gender"
+                android:prompt="@string/spinner_prompt_gender"
+                android:spinnerMode="dropdown"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/dateOfBirthLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewMessage" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        style="@style/MaterialTextInputLayout"
+        app:endIconMode="clear_text"
+        app:endIconTint="@android:color/white"
+        android:layout_marginTop="@dimen/common_spacing_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateOfBirthLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:drawableStart="@drawable/ic_home_black_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:textColor="@android:color/white"
+            android:inputType="text|textPostalAddress"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/cursor_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cityLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        style="@style/MaterialTextInputLayout"
+        app:endIconMode="clear_text"
+        app:endIconTint="@android:color/white"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="@dimen/common_spacing_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stateLayout"
+        app:layout_constraintTop_toBottomOf="@id/addressLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:drawableStart="@drawable/ic_home_black_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:textColor="@android:color/white"
+            android:inputType="textCapSentences"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/cursor_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="State of Origin"
+        style="@style/MaterialTextInputLayout"
+        app:endIconMode="clear_text"
+        app:endIconTint="@android:color/white"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/common_spacing_top"
+        app:layout_constraintStart_toEndOf="@id/cityLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:drawableStart="@drawable/ic_home_black_24dp"
+            android:drawablePadding="@dimen/drawable_padding"
+            android:textColor="@android:color/white"
+            android:inputType="textCapSentences"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/cursor_color"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/zipCodeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Zip code"
+                style="@style/MaterialTextInputLayout"
+                app:endIconMode="clear_text"
+                app:endIconTint="@android:color/white"
+                android:layout_marginTop="@dimen/common_spacing_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cityLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/zipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_code_black_24dp"
+                    android:drawableStart="@drawable/ic_code_black_24dp"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:textColor="@android:color/white"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="6"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/physicianParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/medicalConditionParent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:id="@+id/sectionPhysician"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/section_margin_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Physician/Specialist"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/surnamePhysicianLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            android:hint="@string/surname"
+            style="@style/MaterialTextInputLayout"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/firstNamePhysicianLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sectionPhysician"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/surnamePhysician"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person_outline_white_24dp"
+                android:drawableStart="@drawable/ic_person_outline_white_24dp"
+                android:textColor="@android:color/white"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:inputType="textPersonName|textCapWords"
+                android:selectAllOnFocus="true"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstNamePhysicianLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            android:hint="@string/first_name"
+            style="@style/MaterialTextInputLayout"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            app:layout_constraintStart_toEndOf="@id/surnamePhysicianLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sectionPhysician"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstNamePhysician"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person_outline_white_24dp"
+                android:drawableStart="@drawable/ic_person_outline_white_24dp"
+                android:textColor="@android:color/white"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:inputType="textPersonName|textCapWords"
+                android:selectAllOnFocus="true"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phonePhysicianLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            android:hint="@string/phone_number"
+            style="@style/MaterialTextInputLayout"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstNamePhysicianLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phonePhysician"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_local_phone_white_24dp"
+                android:drawableStart="@drawable/ic_local_phone_white_24dp"
+                android:textColor="@android:color/white"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:inputType="phone"
+                android:selectAllOnFocus="true"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/specialtyLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            android:hint="Specialty"
+            style="@style/MaterialTextInputLayout"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phonePhysicianLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/specialty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:inputType="textCapSentences"
+                android:selectAllOnFocus="true"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hospitalReferenceLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            android:hint="Hospital reference"
+            style="@style/MaterialTextInputLayout"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/specialtyLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/hospitalReference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:inputType="textCapSentences"
+                android:selectAllOnFocus="true"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/medicalConditionParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nextOfKinParent">
+
+        <LinearLayout
+            android:id="@+id/sectionMedicalConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin_top"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Medical"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/bloodGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/blood_group"
+            android:prompt="@string/spinner_prompt_blood_group"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@id/genotype"
+            app:layout_constraintTop_toBottomOf="@id/sectionMedicalConditions"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Spinner
+            android:id="@+id/genotype"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/genotype"
+            android:prompt="@string/spinner_prompt_genotype"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/sectionMedicalConditions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bloodGroup"/>
+
+        <TextView
+            android:id="@+id/medicalConditionMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin_top"
+            android:text="Select your medical condition(s)"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_view_message_text_size"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bloodGroup"/>
+
+        <include
+            android:id="@+id/gridLayoutInc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            layout="@layout/medical_conditions_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/medicalConditionMessage" />
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/allergiesLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Allergies (Food, medication and/or environmental)"
+    style="@style/MaterialTextInputLayout"
+    app:endIconMode="clear_text"
+    app:endIconTint="@android:color/white"
+    android:layout_marginTop="@dimen/section_margin_top"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/gridLayoutInc">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/allergies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:textColor="@android:color/white"
+            android:gravity="start|top"
+            android:selectAllOnFocus="true"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:inputType="textCapSentences|textMultiLine" />
+</com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priorTransfusionReactionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prior transfusion reaction (describe)"
+            style="@style/MaterialTextInputLayout"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/allergiesLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/priorTransfusionReaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:selectAllOnFocus="true"
+                android:inputType="textCapSentences"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/insuranceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Insurance"
+            style="@style/MaterialTextInputLayout"
+            app:endIconMode="clear_text"
+            app:endIconTint="@android:color/white"
+            android:layout_marginTop="@dimen/common_spacing_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/priorTransfusionReactionLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/insurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:inputType="textCapSentences"
+                android:selectAllOnFocus="true"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nextOfKinParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/zipCodeLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/sectionNextOfKin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/section_margin_top"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Next of kin"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/surnameLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_spacing_top"
+                    android:hint="@string/surname"
+                    style="@style/MaterialTextInputLayout"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@android:color/white"
+                    app:layout_constraintEnd_toStartOf="@id/firstNameLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sectionNextOfKin"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/surname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_person_outline_white_24dp"
+                        android:drawableStart="@drawable/ic_person_outline_white_24dp"
+                        android:textColor="@android:color/white"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:inputType="textPersonName|textCapWords"
+                        android:selectAllOnFocus="true"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/firstNameLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_spacing_top"
+                    android:hint="@string/first_name"
+                    style="@style/MaterialTextInputLayout"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@android:color/white"
+                    app:layout_constraintStart_toEndOf="@id/surnameLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sectionNextOfKin"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/firstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_person_outline_white_24dp"
+                        android:drawableStart="@drawable/ic_person_outline_white_24dp"
+                        android:textColor="@android:color/white"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:inputType="textPersonName|textCapWords"
+                        android:selectAllOnFocus="true"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/relationshipLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_spacing_top"
+                    android:hint="Relationship"
+                    style="@style/MaterialTextInputLayout"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/surnameLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/relationship"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:inputType="textCapSentences"
+                        android:selectAllOnFocus="true"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_spacing_top"
+                    android:hint="@string/phone_number"
+                    style="@style/MaterialTextInputLayout"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/relationshipLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_local_phone_white_24dp"
+                        android:drawableStart="@drawable/ic_local_phone_white_24dp"
+                        android:textColor="@android:color/white"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:inputType="phone"
+                        android:selectAllOnFocus="true"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_spacing_top"
+                    android:hint="@string/prompt_email"
+                    style="@style/MaterialTextInputLayout"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phoneLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                        android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+                        android:textColor="@android:color/white"
+                        android:drawablePadding="@dimen/drawable_padding"
+                        android:inputType="textEmailAddress"
+                        android:selectAllOnFocus="true"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/update"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="UPDATE PROFILE"
+                android:textColor="@color/dodgerBlueLight"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/physicianParent"
+                app:backgroundTint="@color/button_color_state_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
